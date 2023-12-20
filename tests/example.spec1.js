@@ -1,0 +1,22 @@
+const{test, expect} = require('@playwright/test')
+
+test('test', async ({page}) => {
+  await page.goto('https://grinfer.com/')
+  await page.getByRole('link', { name: 'Log In' }).click()
+  await page.locator('#email').click()
+  await page.locator('#email').fill('artyr@gmail.com')
+  await page.locator('#password').click()
+  await page.locator('#password').fill('123456!@#$')
+  await page.getByRole('button', { name: 'Log In' }).click()
+  await page.getByRole('link', { name: 'Not a member yet? Create an' }).click()
+  await page.locator('#email').click()
+  await page.locator('#email').fill('artyrtest@gmail.com')
+  await page.locator('#firstName').click()
+  await page.locator('#firstName').fill('Artyr')
+  await page.locator('#lastName').click()
+  await page.locator('#lastName').fill('Shur')
+  await page.locator('#password').click()
+  await page.locator('#password').fill('123456!@#$');
+  await page.getByRole('button', { name: 'Start learning' }).click()
+  await expect(page).toHaveTitle('Google')
+})
