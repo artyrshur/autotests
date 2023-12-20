@@ -13,4 +13,5 @@ test('record demo test', async ({ page }) => {
   await page.locator('a').filter({ hasText: 'Learn Cinema 4D: Low Poly Wolf' }).click();
   await page.getByRole('link', { name: 'Try for free' }).click();
   await expect(page).toHaveTitle('Grinfer.com: Turn your knowledge into profit.')
+  await page.screenshot({ path: 'screenshot.png', fullPage: true });
 });
