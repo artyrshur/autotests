@@ -30,7 +30,7 @@ import {test, expect} from '@playwright/test'
   await page.getByRole('button', { name: 'Продолжить' }).click();
   await page.goto('https://shampuriko.ru/personal/order/make/?ORDER_ID=303281');
   await page.getByRole('button', { name: 'Ок' }).click();
-
+  await expect(page).toHaveTitle('Заказ сформирован')
 });
 // await page.getByRole('link', { name: 'Войти' }).click();
 // await page.getByPlaceholder('+7 (___) ___-____').click();
