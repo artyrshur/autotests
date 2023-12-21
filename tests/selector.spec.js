@@ -26,4 +26,6 @@ test('Selectors Demo', async ({page}) => {
     await page.click('id=login-button')
     await page.screenshot({ path: 'screenshots/screenshot2.png', fullPage: true });
     await page.pause()
+    //using Text
+    //await page.locator('text=LOGIN').click()
 });
