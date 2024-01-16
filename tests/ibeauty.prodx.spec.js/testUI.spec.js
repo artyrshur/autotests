@@ -9,5 +9,5 @@ await page.goto('https://n.dev-beauty.ru/catalog/perfume-unisex-parfyumernaya-vo
 await page.pause()
 await page.getByRole('button', { name: 'Да, верно' }).click();
 await page.pause()
-await page.screenshot({ path: 'screenshot/screenshot.png', fullPage: true });
+await page.screenshot({ path: 'screenshot/screenip13.png', fullPage: true });
 });

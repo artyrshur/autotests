@@ -9,5 +9,5 @@ await page.goto('https://n.dev-beauty.ru/catalog/crystal-bright-nabor-nabor-dlya
 await page.pause()
 await page.getByRole('button', { name: 'Да, верно' }).click();
 await page.pause()
-await page.screenshot({ path: '/screenshot/screenshotpixel4.png', fullPage: true });
+await page.screenshot({ path: 'screenshot/screenshotpixel4.png', fullPage: true });
 });
