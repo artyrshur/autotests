@@ -6,7 +6,7 @@ test('test', async ({ page }) => {
   await page.getByRole('button', { name: 'Да, верно' }).click();
   await page.getByRole('link', { name: 'Бренды', exact: true }).click();
   await page.pause()
-  await page.getByLabel('A-Derma').click();
+  await page.locator('//a[@aria-label="A-Derma"]').click()
   await page.pause()
   await page.screenshot({ path: 'screenshot/screenshot.png', fullPage: true });
   //check element present or not
