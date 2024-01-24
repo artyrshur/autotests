@@ -19,7 +19,7 @@ test ('API POST Request', async({request}) => {
 test ('API POST1 Request', async({request}) => {
     const response = await request.post('http://dev.goodlombard.ru/api/v1/auth/login/pin', {
         data: {
-            "phone": "79221941932",
+            "phone": "79221941944",
             "pin": "111111"
         }
     })
