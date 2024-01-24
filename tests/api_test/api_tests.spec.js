@@ -20,7 +20,7 @@ test ('API POST1 Request', async({request}) => {
     const response = await request.post('http://dev.goodlombard.ru/api/v1/auth/login/pin', {
         data: {
             "phone": "79221941932",
-            "pin": "936581"
+            "pin": "111111"
         }
     })
     expect (response.status()).toBe(200)
